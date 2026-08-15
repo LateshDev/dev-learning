@@ -240,8 +240,8 @@ export class SignupComponent {
   }
 }
 
-HTML
-
+### HTML
+```
 <form
   [formGroup]="signupForm"
   (ngSubmit)="submitForm()"
@@ -265,7 +265,7 @@ HTML
   </button>
 
 </form>
-
+```
 Here, the form is created in TypeScript and the HTML connects to it using "[formGroup]" and "formControlName".
 
 Reactive forms are especially useful when a form contains multiple fields, complex rules, or detailed validation.
