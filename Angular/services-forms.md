@@ -1,4 +1,4 @@
-# Angular · Day 3 (3 of 3) — Services, Data Sharing & Forms
+# Angular · Day 3  — Services, Data Sharing & Forms
 
 Angular applications often need a place for reusable logic, communication between components, and handling user input. This section covers Services, Dependency Injection, Shared Data, and Forms.
 
