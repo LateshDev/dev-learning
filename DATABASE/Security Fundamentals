@@ -1,0 +1,194 @@
+#  Database & Security Fundamentals
+
+What I Learned Today
+
+Today I learned about the basic security concepts that are important while developing websites and backend applications. I understood how attackers may try to guess credentials, how much technical information a website can receive from a browser, how automated requests can create fake data, and how backend developers can protect their applications.
+
+1. Brute-Force Attacks
+
+A brute-force attack involves trying many possible passwords or PIN combinations until the correct one is found.
+
+For example, a 4-digit PIN has:
+
+0000 to 9999 = 10,000 combinations
+
+Longer and more complex passwords are much harder to guess.
+
+---
+
+2. Preventing Brute-Force Attacks
+
+Web applications can limit repeated login attempts using different security measures.
+
+Some common protections are:
+
+- Rate limiting
+- Temporary account blocking
+- Login delays
+- CAPTCHA
+- Multi-factor authentication
+- Strong password requirements
+
+These techniques make automated password guessing much less effective.
+
+---
+
+3. Password Security
+
+Passwords should not be stored directly in a database as readable text.
+
+Instead, applications use password-hashing algorithms such as:
+
+bcrypt
+Argon2
+
+Hashing provides an additional layer of protection if stored password data is exposed.
+
+---
+
+4. Information a Website Can Receive
+
+When I visit a website, the server can receive certain technical information from my browser.
+
+This can include:
+
+- Public IP address
+- Browser type
+- Operating system
+- Screen information
+- Language
+- Time zone
+- Approximate location
+
+A normal website does not automatically know my exact house address or GPS location just because I opened a link.
+
+---
+
+5. Information Exposed by the Browser
+
+The browser receives and runs frontend technologies such as:
+
+- HTML
+- CSS
+- JavaScript
+
+Websites can use browser information for functionality and compatibility.
+
+The important security lesson is that anything delivered to the browser should be considered potentially visible to the user.
+
+Therefore, secret keys, database passwords and other sensitive credentials should not be placed in frontend code.
+
+---
+
+6. Client-Side and Server-Side Validation
+
+I learned that frontend validation alone cannot provide complete security.
+
+A user can potentially modify or bypass checks performed only in the browser.
+
+Therefore, the backend must validate important information again.
+
+User Input
+    ↓
+Frontend Validation
+    ↓
+Server Validation
+    ↓
+Database
+
+The server should always make the final decision about whether the submitted data is acceptable.
+
+---
+
+7. Ethical Hackers
+
+Ethical hackers legally test applications and systems to discover security weaknesses.
+
+Their work includes:
+
+- Finding vulnerabilities
+- Reporting problems
+- Helping developers fix weaknesses
+- Working within authorized limits
+
+A malicious hacker attempts to exploit systems without proper permission.
+
+So, the important difference is authorization and intention.
+
+---
+
+8. Automated Requests and Fake Records
+
+I learned that websites can be abused by automated programs that send many requests.
+
+For example, an unprotected registration endpoint could receive a large number of automated submissions.
+
+This may create:
+
+- Fake accounts
+- Duplicate records
+- Unwanted database entries
+- Extra server load
+
+This shows why public APIs and forms need proper protection.
+
+---
+
+9. Protecting APIs and Forms
+
+Some methods used to protect application endpoints are:
+
+- Rate limiting
+- Authentication
+- CAPTCHA
+- Input validation
+- Duplicate checking
+- Email verification
+- Activity monitoring
+
+These mechanisms help control unwanted or suspicious requests.
+
+---
+
+10. Authentication and Authorization
+
+I learned the difference between authentication and authorization.
+
+Authentication means checking who the user is.
+
+Authorization means checking what that user is allowed to do.
+
+For example:
+
+Student → View personal results
+Teacher → Update marks
+Admin → Manage users
+
+This also connects with the principle of least privilege, where users should receive only the permissions they actually need.
+
+---
+
+11. Important Security Practices
+
+A secure application should use several layers of protection.
+
+Important practices include:
+
+- Use HTTPS.
+- Hash passwords securely.
+- Validate data on the server.
+- Apply rate limits.
+- Use authentication and authorization.
+- Protect database credentials.
+- Give applications only required permissions.
+- Monitor unusual activity.
+- Keep dependencies updated.
+- Never blindly trust client-side data.
+
+Final Learning
+
+From today's class, I learned that security is not a single feature that can simply be added at the end of a project. A backend should be designed with security in mind from the beginning.
+
+The most important lesson for me was:
+
+«Never completely trust the client. Validate important information on the server and use multiple layers of security to protect the application.»
