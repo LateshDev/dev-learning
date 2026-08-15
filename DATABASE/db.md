@@ -337,10 +337,10 @@ With an index, the database can locate records much more efficiently.
 A primary key normally has an index associated with it.
 
 We can also create an index on another frequently searched column:
-
+```
 CREATE INDEX idx_student_email
 ON students(email);
-
+```
 Now searches involving the email column can benefit from the index.
 
 ---
@@ -487,7 +487,7 @@ Using SQL, we can:
 
 # 22. SQL Command Categories
 
-DDL – Data Definition Language
+# DDL – Data Definition Language
 
 Used to create or modify database structures.
 
@@ -500,7 +500,7 @@ TRUNCATE
 
 ---
 
-DML – Data Manipulation Language
+# DML – Data Manipulation Language
 
 Used for changing records.
 
@@ -512,7 +512,7 @@ DELETE
 
 ---
 
-DQL – Data Query Language
+# DQL – Data Query Language
 
 Used to retrieve information.
 
@@ -522,7 +522,7 @@ SELECT
 
 ---
 
-DCL – Data Control Language
+# DCL – Data Control Language
 
 Used for database permissions.
 
@@ -533,7 +533,7 @@ REVOKE
 
 ---
 
-TCL – Transaction Control Language
+# TCL – Transaction Control Language
 
 Used for controlling transactions.
 
@@ -761,7 +761,7 @@ The main concepts I learned are:
 My next practical step is to replace JSON-based storage in my resume API with MySQL.
 
 The project can be structured using separate tables, for example:
-
+```
 resume_db
    |
    ├── users
@@ -769,7 +769,7 @@ resume_db
    ├── resumes
    |
    └── skills
-
+```
 The tables can then be connected using foreign keys, and JOIN queries can be used to retrieve complete resume information.
 
 This will give me practical experience with database design, relationships, indexing and SQL while also making my backend project more realistic.
