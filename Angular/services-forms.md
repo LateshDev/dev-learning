@@ -4,7 +4,7 @@ Angular applications often need a place for reusable logic, communication betwee
 
 ---
 
-# 1. What is an Angular Service?
+# 1. What is an Service?
 
 A service is a reusable TypeScript class that contains logic or data needed by multiple parts of an application.
 
